@@ -4,6 +4,7 @@ console.log("Hello World!");
 
 let userScore = 0;
 let compScore = 0;
+let rndWinner = "a";
 
 
 function getComputerChoice()    {
@@ -44,9 +45,48 @@ function getUserChoice()    {
 
 function playRound(userChoice, compChoice)  {
 
+    if ((userChoice.toLowerCase() === 'rock') && (compChoice.toLowerCase() === 'rock')){
+            console.log("Tie! Play Again!");
+            return "t";
+    }   else if ((userChoice.toLowerCase() === 'rock') && (compChoice.toLowerCase() === 'paper')){
+            console.log("You Lose! Paper beats Rock. Better luck next time!");
+            return "c";
+    }   else if ((userChoice.toLowerCase() === 'rock') && (compChoice.toLowerCase() === 'scissors')){
+            console.log("You Win! Rock beats Scissors.");
+            return "u";
+    }   else if ((userChoice.toLowerCase() === 'paper') && (compChoice.toLowerCase() === 'rock')) {
+            console.log("You Win! Paper beats Rock.");
+            return "u";
+    }   else if ((userChoice.toLowerCase() === 'paper') && (compChoice.toLowerCase() === 'paper'))  {
+            console.log("Tie! Play Again!");
+            return "t";
+    }   else if ((userChoice.toLowerCase() === 'paper') && (compChoice.toLowerCase() === 'scissors'))  {
+            console.log("You Lose! Scissors beats Paper. Better luck next time!");
+            return "c";
+    }   else if ((userChoice.toLowerCase() === 'scissors') && (compChoice.toLowerCase() === 'rock'))  {
+            console.log("You Lose! Rock beats Scissors. Better luck next time!");
+            return "c";
+    }   else if ((userChoice.toLowerCase() === 'scissors') && (compChoice.toLowerCase() === 'paper'))  {
+            console.log("You Win! Scissors beats Paper.");
+            return "u";
+    }   else if ((userChoice.toLowerCase() === 'scissors') && (compChoice.toLowerCase() === 'scissors'))  {
+            console.log("Tie! Play Again!");
+            return "t"
+    }   else{
+        return "Something starnge wackadoodle happened..."
+    }
     // do stuff in here to play the round
 
 }
+
+const userChoice = getUserChoice();
+console.log(userChoice);
+const compChoice = getComputerChoice();
+console.log(compChoice);
+
+console.log(rndWinner);
+rndWinner = (playRound(userChoice, compChoice));
+console.log(rndWinner);
 
 console.log(userScore);
 console.log(compScore);
