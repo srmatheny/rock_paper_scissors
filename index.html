@@ -10,6 +10,55 @@
 </head>
 <body>
 
+    <h1 class="header">Rock Paper Scissors</h1>
+
+    <div class="scoreArea">
+        <h2>Current Score</h2>
+    </div>
+    <div class="scoreArea">
+        <h3>USER - <span id="userScore">0</span>  COMP - <span id="compScore">0</span></h3> 
+    </div>
+
+
+    <div class="btnArea">
+        <button id="btnRock" class="custom-button">Rock</button>
+
+        <button id="btnPaper" class="custom-button">Paper</button>  
+
+        <button id="btnScissors" class="custom-button">Scissors</button> 
+    </div>
+
+
+
+    <!--<div class="card-container">
+        <div class="card"></div>
+
+    </div> -->
+
+
+    <div class="resultArea">
+        <div class="resultHeader">
+            <h2 id="rndWinner">Make selection above to play! First to win 5 rounds wins.</h2>
+        </div>
+
+        <div class="resultCont">
+            <div class="resultCard">
+                <h2 style="text-align: center;">User played</h2>
+                <p style="text-align: center;" id="userChoice">Content for card 1 -- image</p>
+                <img id="userImage" src="./images/default.png" style="text-align: center"; max-width="100%">
+            </div>
+            <div class="resultCard">
+                <h2 style="text-align: center;">Comp played</h2>
+                <p style="text-align: center;" id="compChoice">Content for card 2 -- image</p>
+                <img id="compImage" src="./images/default.png" style="text-align: center"; max-width="100%">
+
+            </div>
+        </div>
+        
+    
+    
+    </div>
+
         <script>
 
             //pick R/P/S
